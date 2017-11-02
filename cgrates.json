@@ -52,20 +52,20 @@
  	"timings": {"limit": 10000, "ttl":"0s", "precache": false},					// control timings caching
  },
 
+//Changing all listening to 0.0.0.0 instead of 127.0.0.1 - just for ensuring future remote connectivity.
+ "listen": {
+ 	"rpc_json": "0.0.0.0:2012",			// RPC JSON listening address
+ 	"rpc_gob": "0.0.0.0:2013",			// RPC GOB listening address
+ 	"http": "0.0.0.0:2080",				// HTTP listening address
+ },
 
-// "listen": {
-// 	"rpc_json": "127.0.0.1:2012",			// RPC JSON listening address
-// 	"rpc_gob": "127.0.0.1:2013",			// RPC GOB listening address
-// 	"http": "127.0.0.1:2080",				// HTTP listening address
-// },
-
-
-// "http": {									// HTTP server configuration
-// 	"json_rpc_url": "/jsonrpc",				// JSON RPC relative URL ("" to disable)
+//Enabling HTTP Server as well
+ "http": {									// HTTP server configuration
+ 	"json_rpc_url": "/jsonrpc",				// JSON RPC relative URL ("" to disable)
 // 	"ws_url": "/ws",						// WebSockets relative URL ("" to disable)
-// 	"use_basic_auth": false,				// use basic authentication
-// 	"auth_users": {}						// basic authentication usernames and base64-encoded passwords (eg: { "username1": "cGFzc3dvcmQ=", "username2": "cGFzc3dvcmQy "})
-// },
+	"use_basic_auth": false,				// use basic authentication
+ 	"auth_users": {}						// basic authentication usernames and base64-encoded passwords (eg: { "username1": "cGFzc3dvcmQ=", "username2": "cGFzc3dvcmQy "})
+ },
 
 
 // "data_db": {								// database used to store runtime data (eg: accounts, cdr stats)
