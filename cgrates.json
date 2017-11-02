@@ -67,16 +67,16 @@
  	"auth_users": {}						// basic authentication usernames and base64-encoded passwords (eg: { "username1": "cGFzc3dvcmQ=", "username2": "cGFzc3dvcmQy "})
  },
 
-
-// "data_db": {								// database used to store runtime data (eg: accounts, cdr stats)
-// 	"db_type": "redis",						// data_db type: <redis|mongo>
-// 	"db_host": "127.0.0.1",					// data_db host address
-// 	"db_port": 6379, 						// data_db port to reach the database
-// 	"db_name": "10", 						// data_db database name to connect to
-// 	"db_user": "cgrates", 					// username to use when connecting to data_db
-// 	"db_password": "", 						// password to use when connecting to data_db
-// 	"load_history_size": 10,				// Number of records in the load history
-// },
+//Enabling mongo access
+ "data_db": {								// database used to store runtime data (eg: accounts, cdr stats)
+ 	"db_type": "mongo",						// data_db type: <redis|mongo>
+ 	"db_host": "cgdb",					// data_db host address
+ 	"db_port": 27017, 						// data_db port to reach the database
+ 	"db_name": "cgrates", 						// data_db database name to connect to
+ 	"db_user": "cgrates", 					// username to use when connecting to data_db
+ 	"db_password": "CGRateS.org", 						// password to use when connecting to data_db
+ 	"load_history_size": 10,				// Number of records in the load history
+ },
 
 
 // "stor_db": {								// database used to store offline tariff plans and CDRs
